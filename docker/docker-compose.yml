@@ -14,7 +14,9 @@ services:
 
   studio:
     container_name: supabase-studio
-    image: supabase/studio:2026.09.07-sha-7996410
+    build:
+      context: .
+      dockerfile: Dockerfile.studio
     restart: unless-stopped
     healthcheck:
       test:
